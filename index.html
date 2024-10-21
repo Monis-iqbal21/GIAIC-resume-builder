@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📄Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+
+</head>
+
+<body>
+    <h1 class="app_heading">
+        📝Create Your Resume
+    </h1>
+
+    <div class="body-form">
+        <div id="resume_form_container">
+
+
+            <form id="resume_form">
+
+
+                <div class="info_container">
+
+
+                    <div class="personal_info_div">
+                        <h3>Personal Information</h3>
+
+                        <Label>First Name:</Label>
+                        <input placeholder="First Name" type="text" id="fname" /> <br>
+
+                        <Label>Last Name:</Label>
+                        <input placeholder="Last Name" type="text" id="lname" /><br>
+
+                        <Label>Email:</Label>
+                        <input placeholder="Email" type="email" id="email" /><br>
+
+                        <Label>Address:</Label>
+                        <input placeholder="Address" type="text" id="address" /><br>
+
+                        <Label>Phone no:</Label>
+                        <input placeholder="Phone no" type="text" id="phone-number" /><br>
+
+                        <input type="file" id="imageInput" accept="image/*"><br />
+                        <Label>About Me:</Label>
+                        <textarea name="summary" id="summary" class="summary_form" oninput="limitWords(this, 70)"
+                            placeholder="Summary for your Resume / about Your self" ></textarea>
+                    </div>
+
+
+
+
+                    <div class="college_div">
+                        <h3>College Details</h3>
+
+                        <Label>College:</Label>
+                        <input placeholder="College" type="text" id="college" /> <br>
+
+                        <Label>Starting Year:</Label>
+                        <input placeholder="year" type="date" id="start-year" /><br>
+
+                        <Label>End / Expected year:</Label>
+                        <input placeholder="End year" type="date" id="end-year" /><br>
+
+                        <Label>Field:</Label>
+                        <input placeholder="Field" type="text" id="college-field" /><br>
+                    </div>
+                    <div class="Uni_div">
+                        <h3>University Details</h3>
+
+                        <Label>University:</Label>
+                        <input placeholder="University" type="text" id="university" /> <br>
+
+                        <Label>Starting Year:</Label>
+                        <input placeholder="year" type="date" id="start-year-uni" /><br>
+
+                        <Label>End / Expected year:</Label>
+                        <input placeholder="End year" type="date" id="end-year-uni" /><br>
+
+                        <Label>Field:</Label>
+                        <input placeholder="Field" type="text" id="uni-field" /><br>
+                    </div>
+
+
+
+                    <div class="Experience_div">
+                        <h3>Experience</h3>
+
+                        <label>Company Name:</label>
+                        <input placeholder="Company name" type="text" id="exp_comp_name" />
+
+                        <label>Role in the Company:</label>
+                        <input placeholder="Role in the Company" type="text" id="exp_comp_roll" />
+
+                        <label>Years of Experience:</label>
+                        <input placeholder="Years of Experience" type="text" id="exp_comp_date" />
+
+                    </div>
+
+                    <div class="project_div_form">
+                        <h3>Project : 1</h3>
+
+                        <label>Project Name:</label>
+                        <input placeholder="Project name" type="text" id="project_name_1" class="project_name_form" />
+
+                        <label>Tools used</label>
+                        <textarea placeholder="HTML, Css, JS...." type="text" id="project_tool_1"
+                            class="project_text_area"></textarea>
+
+                        <label>Discribe your project</label>
+                        <textarea placeholder="Describe your project" type="text" id="project_detail_1" oninput="limitWords(this, 50)"
+                            class="project_text_area" cols="10"></textarea>
+
+                        <h3>Project : 2</h3>
+                        <label>Project Name:</label>
+                        <input placeholder="Project name" type="text" id="project_name_2" class="project_name_form" />
+
+                        <label>Tools used</label>
+                        <textarea placeholder="HTML, Css, JS...." type="text" id="project_tool_2"
+                            class="project_text_area"></textarea>
+
+                        <label>Discribe your project</label>
+                        <textarea placeholder="Describe your project" type="text" id="project_detail_2" oninput="limitWords(this, 50)"
+                            class="project_text_area" cols="10"></textarea>
+
+                    </div>
+
+
+
+                    <div style="text-align: center;" class="skill_div">
+                        <h3>Skills</h3>
+                        <input placeholder="Enter your Skills" type="text" id="skills" class="skill_input" />
+                        <button type="button" onclick="add_skill()" id="skill_btn">Add Skills</button>
+                        <div id="display_skills" class="display_skills">
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+                <div class="three_button">
+                    <button type="submit" class="submit_btn" id="create_resume_btn">Create Resume</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+
+
+
+
+
+        <!--             resume         -->
+        <div class="resume_page_container" id="resume_page_container">
+
+            <div class="three_button">
+                <button type="button" class="submit_btn" id="edit_btn" onclick="editResume()">Edit PDF</button>
+                <button type="button" class="pdf_btn" id="download_btn" onclick="pdfResume()">Download PDF</button>
+            </div>
+
+
+            <div id="resume_section" class="resume_section">
+
+            </div>
+        </div>
+
+        <script src="index.js">
+
+        </script>
+    </div>
+</body>
+
+</html>

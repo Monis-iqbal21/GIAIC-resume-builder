@@ -1,0 +1,508 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+.body-form {
+    margin: 0px 0 0px 0;
+    padding: 50px 0px 100px 0px;
+    box-sizing: border-box;
+    background-color: #eeeeee;
+
+}
+
+
+/*                                                        button code */
+.three_button {
+    position: fixed;
+    top: 10;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    flex-wrap: wrap;
+    z-index: 100;
+    margin-bottom: 10px;
+}
+
+.three_button button {
+    margin: 0 10px;
+    padding: 8px 14px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+}
+
+#edit_btn {
+    display: none;
+    justify-content: center;
+
+}
+
+#download_btn {
+    display: none;
+    justify-content: center;
+
+}
+
+
+#edit_btn.show,
+#download_btn.show {
+    display: inline-block;
+}
+
+
+#edit_btn {
+    background-color: #4059a0;
+
+}
+
+#edit_btn:hover {
+    background-color: #2f406e;
+
+}
+
+.pdf_btn {
+    background-color: #137c2d;
+}
+
+.pdf_btn:hover {
+    background-color: #13502a;
+}
+
+#create_resume_btn {
+    background-color: hsl(254, 15%, 40%);
+}
+
+#create_resume_btn:hover {
+    background-color: hsl(254, 34%, 53%);
+}
+
+
+
+/*                                         form Code */
+
+:root {
+    --primary-color: hsl(254.12deg 17.89% 18.63%);
+    --secondary-color: hsl(254.29deg 16.28% 25.29%);
+    --btn: hsl(256.42deg 37.85% 50.78%);
+    --font_color_heading: rgb(90, 132, 209);
+    --font_color: white;
+}
+
+.app_heading {
+    background-color: var(--font_color_heading);
+    color: white;
+    width: 100%;
+    margin: 0px;
+    padding: 20px 0;
+    text-align: center;
+    align-content: center;
+
+}
+
+
+
+.info_container {
+    width: 100%;
+    align-items: center;
+}
+
+
+
+.personal_info_div {
+    border: 1px solid rgb(14, 14, 14);
+    padding: 10px 7% 30px 7%;
+    margin: 0px auto 10px auto;
+    width: 80%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+}
+
+#imageInput {
+    padding: 8px 3% 5px 3%;
+    height: 35px;
+    width: 70%;
+    text-align: center;
+    margin: 10px 0 25px 15%;
+}
+
+
+.college_div {
+    border: 1px solid rgb(172, 172, 172);
+    padding: 10px 7% 30px 7%;
+    margin: 10px 1% 10px 3%;
+    width: 45%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: var(--primary-color);
+
+}
+
+.Uni_div {
+    border: 1px solid rgb(172, 172, 172);
+    padding: 10px 7% 30px 7%;
+    margin: 10px 2% 10px 3%;
+    width: 45%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: var(--primary-color);
+
+}
+
+
+.Experience_div {
+    border: 1px solid rgb(172, 172, 172);
+    padding: 10px 7% 30px 7%;
+    margin: 10px auto;
+    width: 80%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+}
+
+.skill_div {
+    border: 1px solid rgb(172, 172, 172);
+    padding: 10px 7% 30px 7%;
+    margin: 10px auto;
+    width: 80%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+}
+
+label {
+    text-align: left;
+    width: 100%;
+    color: white;
+    margin-bottom: 10px;
+    padding: 3px;
+
+}
+
+input {
+    color: white;
+    background-color: var(--secondary-color);
+    width: 100%;
+    margin-bottom: 25px;
+    height: 20px;
+    border-radius: 5px;
+    padding: 15px 0px 15px 10px;
+    box-sizing: border-box;
+    border: none;
+
+}
+
+
+
+h3 {
+    text-align: center;
+    color: var(--font_color_heading);
+    font-size: 30px;
+}
+
+#skill_btn {
+    padding: 10px 15px;
+    border: none;
+    background-color: var(--btn);
+    border-radius: 5px;
+    color: var(--font_color);
+    margin-bottom: 20px;
+}
+
+
+.skill_form_display {
+    background-color: var(--font_color_heading);
+    padding: 10px 5px 10px 10px;
+    margin: 5px 5px 5px 5px;
+    border-radius: 5px;
+    color: var(--primary-color);
+    font-weight: bold;
+
+}
+
+.skill_display_form_div {
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.delete_skill_btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+
+.delete_skill_btn:hover {
+    color: red;
+}
+
+.summary_form {
+    width: 97%;
+    resize: none;
+    height: 100px;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    color: var(--font_color);
+    padding: 10px 15px;
+    margin: 3px 0px 20px 0px;
+    border: none;
+}
+
+.project_div_form {
+    padding: 10px 7% 30px 7%;
+    margin: 10px auto;
+    width: 80%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+}
+
+.project_name_form {
+    width: 100%;
+}
+
+.project_text_area {
+    width: 97%;
+    resize: none;
+    height: 100px;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    color: var(--font_color);
+    padding: 10px 15px;
+    margin: 0px 0px 20px 0px;
+    border: none;
+
+}
+
+
+
+
+
+
+
+
+/*        Resume  section */
+
+
+
+.resume_page_container {
+    background-color: rgba(175, 218, 235, 0.308);
+    text-align: center;
+    padding: 90px 0;
+    align-items: center;
+    width: 100%;
+    margin: 10px auto;
+}
+
+#resume_page_container {
+
+    display: none;
+}
+
+.resume_section {
+    background-image: url("./resumebackground.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 210mm;
+    height: 278mm;
+    max-width: 210mm;
+    max-height: 278mm;
+    padding: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    box-sizing: border-box;
+}
+
+
+/*              left  resume  side  */
+
+.section_left {
+    box-sizing: border-box;
+
+}
+
+.img_div {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
+    background-color: var(--font_color_heading);
+
+}
+
+.profile_img {
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+
+.education_skill_div {
+
+    width: 90%;
+    padding-left: 5%;
+
+
+
+}
+
+.heading {
+    padding: 10px;
+    background-color: #2f406e;
+    width: 100%;
+    text-align: left;
+    color: white;
+}
+
+.span_heading {
+    color: blue;
+    font-size: large;
+    text-align: left;
+
+}
+
+.edu_detail {
+    font-size: small;
+    text-align: left;
+
+}
+
+
+.skill_display_div {
+    width: 80%;
+    padding-left: 10px;
+
+}
+
+.skill_display_resume {
+    background-color: var(--font_color_heading);
+    margin: 0px 0px;
+    list-style: none;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/*              right  resume  side  */
+
+
+
+.section_right {
+    padding: 0px 10px 0px 10px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.personal_info_resume {
+    text-align: center;
+    background-color: var(--font_color_heading);
+    padding: 10px 0px;
+    color: white;
+
+}
+
+.fullName {
+    margin-top: 0px;
+    color: var(--primary-color);
+}
+
+.personal_info {
+    font-size: small;
+    padding: 0px 10px;
+}
+
+.vertical_line {
+    color: black;
+    font-weight: x-large;
+    font-size: larger;
+}
+
+
+.summary_div {
+
+    padding: 0px 0px 0px 10px;
+}
+
+.right_headings {
+    color: var(--font_color_heading);
+    margin: 25px 0px 10px 0px;
+
+}
+
+.summary_detail {
+    font-size: small;
+}
+
+
+
+.experience_div {
+
+    padding: 0px 0px 0px 10px;
+}
+
+.experience_company {
+    color: var(--secondary-color);
+    font-size: large;
+    font-weight: bold;
+}
+
+.exp_date {
+    color: rgb(161, 160, 160);
+}
+
+.exp_comp_detail {
+    font-size: small;
+}
+
+
+.project_div {
+    padding: 0px 0px 0px 10px;
+
+}
+
+.project_title {
+    color: var(--secondary-color);
+    font-size: large;
+    font-weight: bold;
+}
+
+.project_used_tools {}
+
+.tool_heading {
+    color: var(--font_color_heading);
+    font-weight: bold;
+}
+
+
+.project_detail {
+    font-size: small;
+}
